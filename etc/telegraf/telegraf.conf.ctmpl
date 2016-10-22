@@ -1,0 +1,1 @@
+{{ print (env "TELEGRAF_CONF_KEY") "/" | tree | explode  | toJSON | plugin "parse_config.py" | parseJSON | toTOML }}
